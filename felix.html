@@ -8,11 +8,13 @@ hoi
         
     }
     function vervolg(data){
+        let eindstring = "";
         for(let x =0; x< data.length;x++){
-            document.getElementById("uitkomst").innerHTML += `
+            eindstring += `
                 <div>${data[x].naam}</div>
             `
         }
+        document.getElementById("uitkomst").innerHTML = eindstring;
     }
 </script>
 <button onclick="checkitout()">klik hier</button>
