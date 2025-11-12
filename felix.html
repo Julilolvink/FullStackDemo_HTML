@@ -1,0 +1,10 @@
+hoi
+<script>
+    function checkitout(){
+        console.log("check");
+        fetch("http://127.0.0.1:5000/fkaart")
+        .then( r => r.json() )
+        .then( d => console.log(d))
+    }
+</script>
+<button onclick="checkitout()">klik hier</button>
