@@ -1,0 +1,19 @@
+<script>
+    function greet() {
+    alert("Hello, world!");
+    fetch("http://127.0.0.1:5000/jarchetype")
+    .then (response => response.json())
+    .then (d => step2(d));
+    }
+    function step2(data) {
+        let eindstring = "";
+        for(let x =0; x< data.length;x++){
+            eindstring += `
+                <div>${data[x].naam}</div>
+            `
+        }
+        document.getElementById("output").innerHTML = eindstring;
+    }
+</script>
+<button onclick="greet()">Click me</button>
+<div id="output"></div>
